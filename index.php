@@ -2,10 +2,10 @@
 require_once("funciones.php");
 ?>
 <!doctype html>
-<html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
 <title>Aranceles</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
@@ -29,13 +29,13 @@ require_once("funciones.php");
                             <tr>
                                 <td>QD=</td>
                                 <td><input type="number" id="a" step="0.table1" class="form-control" value="85.8"></td>
-                                
+
                                 <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-8"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
                                 <td>QD=</td>
                                 <td><input type="number" id="c" step="0.table1" class="form-control" value="-10.5"></td>
-                                
+
                                 <td><div class="input-group"><input type="number" id="d" step="0.01" class="form-control" value="3"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
@@ -60,12 +60,12 @@ require_once("funciones.php");
                                 </td>
                             </tr>
                         </table>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
-        
+
         </div>
         <div class="row">
             <div class="col-lg-6">
@@ -77,17 +77,17 @@ require_once("funciones.php");
                         <div id="r1"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">2.-Cantidad de Equilibrio</div>
                     <div class="panel-body text-center">
-                       
+
                         <div id="r2"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -99,7 +99,7 @@ require_once("funciones.php");
                         <div id="r3"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -109,7 +109,7 @@ require_once("funciones.php");
                         <div id="r4"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -121,7 +121,7 @@ require_once("funciones.php");
                         <div id="r5"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -131,7 +131,7 @@ require_once("funciones.php");
                         <div id="r6"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -143,7 +143,7 @@ require_once("funciones.php");
                         <div id="r7"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -153,7 +153,7 @@ require_once("funciones.php");
                         <div id="r8"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -161,11 +161,11 @@ require_once("funciones.php");
                 <div class="panel panel-default">
                     <div class="panel-heading">Cantidad Necesaria de las Importaciones</div>
                     <div class="panel-body text-center">
-                        
+
                         <div id="r81"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -177,7 +177,7 @@ require_once("funciones.php");
                         <div id="r9"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -187,7 +187,7 @@ require_once("funciones.php");
                         <div id="r10"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
     </div>
