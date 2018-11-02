@@ -34,13 +34,13 @@ $folder="";
                     <div class="panel-body">
                         <table>
                             <tr>
-                                <td>QD=</td>
+                                <td><?php echo sb("Q","D")?>=</td>
                                 <td><input type="number" id="a" step="0.table1" class="form-control" value="85.8"></td>
 
                                 <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-8"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
-                                <td>QD=</td>
+                                <td><?php echo sb("Q","S")?>=</td>
                                 <td><input type="number" id="c" step="0.table1" class="form-control" value="10.5"></td>
 
                                 <td><div class="input-group"><input type="number" id="d" step="0.01" class="form-control" value="3"><span class="input-group-addon">P</span></div></td>
@@ -56,7 +56,7 @@ $folder="";
                                 <td colspan="3">
                                     <div class="input-group input-group-sm">
                                       <span class="input-group-addon"><small>Arancel</small></span>
-                                      <input type="number" class="form-control" placeholder="4" id="ar" value="50">
+                                      <input type="number" class="form-control col-lg-2" placeholder="4" id="ar" value="50">
                                         <span class="input-group-addon">%</span>
                                     </div>
                                 </td>
