@@ -4,12 +4,12 @@ require_once("funciones.php");
 $folder="";
 ?>
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <title>Aranceles</title>
     <meta name="viewport" content="width=device-width,user-scalable=no">
-    
+
     <meta name="theme-color" content="#337ab7">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -36,13 +36,13 @@ $folder="";
                             <tr>
                                 <td>QD=</td>
                                 <td><input type="number" id="a" step="0.table1" class="form-control" value="85.8"></td>
-                                
+
                                 <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-8"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
                                 <td>QD=</td>
                                 <td><input type="number" id="c" step="0.table1" class="form-control" value="10.5"></td>
-                                
+
                                 <td><div class="input-group"><input type="number" id="d" step="0.01" class="form-control" value="3"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
@@ -67,12 +67,12 @@ $folder="";
                                 </td>
                             </tr>
                         </table>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
-        
+
         </div>
         <div class="row">
             <div class="col-lg-6">
@@ -84,17 +84,17 @@ $folder="";
                         <div id="r1"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">2.-Cantidad de Equilibrio</div>
                     <div class="panel-body text-center">
-                       
+
                         <div id="r2"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -106,7 +106,7 @@ $folder="";
                         <div id="r3"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -116,7 +116,7 @@ $folder="";
                         <div id="r4"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -128,7 +128,7 @@ $folder="";
                         <div id="g5"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -138,7 +138,7 @@ $folder="";
                         <div id="r6"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -146,11 +146,11 @@ $folder="";
                 <div class="panel panel-default">
                     <div class="panel-heading">7.- Excedente de la Oferta</div>
                     <div class="panel-body text-center">
-                        
+
                         <div id="r7"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -160,7 +160,7 @@ $folder="";
                         <div id="r8"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -168,11 +168,11 @@ $folder="";
                 <div class="panel panel-default">
                     <div class="panel-heading">Cantidad Necesaria de las Importaciones</div>
                     <div class="panel-body text-center">
-                        
+
                         <div id="r81"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -184,7 +184,7 @@ $folder="";
                         <div id="r9"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -195,7 +195,7 @@ $folder="";
                         <div id="g10"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -207,17 +207,17 @@ $folder="";
                         <div id="r11"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">12. Nuevo Excedente de la Oferta</div>
                     <div class="panel-body text-center">
-                        
+
                         <div id="r12"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -229,7 +229,7 @@ $folder="";
                         <div id="r13"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -239,7 +239,7 @@ $folder="";
                         <div id="r14"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="row">
@@ -251,7 +251,7 @@ $folder="";
                         <div id="r15"></div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
@@ -261,7 +261,7 @@ $folder="";
                         <div id="r16"></div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
     </div>
