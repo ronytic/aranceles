@@ -29,6 +29,8 @@ var pe=0;
 
 var ig=0;
 var ps=0;
+
+var ci=0;
 $(document).on("ready",function(){
     $("#resolver").click(function(){
         a=parseFloat($("#a").val());
@@ -37,6 +39,9 @@ $(document).on("ready",function(){
         d=parseFloat($("#d").val());
         pm=parseFloat($("#pm").val());
         ar=parseFloat($("#ar").val());
+
+        ci=parseFloat($("#ci").val());
+
         resolver1();
         resolver2();
         resolver3();
@@ -87,7 +92,7 @@ function resolver4(){
         pmin=(Math.abs(c)/Math.abs(d)).toFixed(4);
         var datos=sb("P","min")+"="+Math.abs(c)+"/"+Math.abs(d)+"<br>";
     }
-    
+
     datos+=sb("P","min")+"="+pmin;
     datos+="&#36;";
     $("#r4").html(datos)
@@ -124,17 +129,17 @@ function resolver5(){
             qd:0,
             qs:0
         }
-    
+
     };
     cn=parseFloat(t.pm.qd);
     pn=parseFloat(t.pm.qs);
-	
+
 	var datos=mt(t);
 	$("#r5").html(datos);
     $("#g5").html('');
-	
+
 	graficar5();
-	
+
 	console.log(t);
 }
 
@@ -155,12 +160,12 @@ function resolver7(){
         datos+=sb("S","s")+"="+ss;
     }else{
 		var datos=sb("S","s")+"=("+sb("P","M")+"*CN)-((1/2)*"+sb("P","M")+"(CN-"+sb("P","N")+"))<br>";
-		ss1=(pm*t.pm.qs).toFixed(4)	
-		ss2=(1/2*pm*(t.pm.qs-t.cero.qs)).toFixed(4)	
-		
+		ss1=(pm*t.pm.qs).toFixed(4)
+		ss2=(1/2*pm*(t.pm.qs-t.cero.qs)).toFixed(4)
+
 		datos+=sb("S","s")+"="+ss1+"-"+ss2+"<br>";
 		ss=(parseFloat(ss1)-parseFloat(ss2)).toFixed(4);
-		
+
 		datos+=sb("S","s")+"="+ss;
 	}
     datos+="&#36;";
@@ -191,7 +196,7 @@ function resolver9(){
     var datos=sb("t","($)")+"="+pm+"*"+(ar/100)+"<br>";
     datos+=sb("t","($)")+"="+ts;
     datos+="&#36;";
-    
+
     $("#r9").html(datos)
 }
 function resolver10(){
@@ -199,9 +204,9 @@ function resolver10(){
     var datos=sb("NPI","")+"="+pm+"+"+ts+"<br>";
     datos+="NPI="+npi;
     datos+="&#36;";
-    
-	
-	
+
+
+
     npi=parseFloat(npi);
     t.npi.p=npi;
     t.npi.qd=(a+b*npi).toFixed(4)
@@ -209,25 +214,25 @@ function resolver10(){
 
 	ncn=parseFloat(t.npi.qd);
 	npn=parseFloat(t.npi.qs);
-	
+
 	nqi=parseFloat((ncn-npn).toFixed(4));
-	
+
 	datos+=mt(t);
-	
+
     $("#r10").html(datos);
 	$("#g10").html('');
 	graficar10();
-	
+
     console.log(t);
-	
+
 }
 
 function resolver11(){
-	
+
 	nsd=(1/2*(pmax-npi)*ncn).toFixed(4);
 	var datos=sb("NS","D")+"=1/2*("+pmax+"-"+npi+")*"+ncn+"<br>";
-	
-	
+
+
 	datos+="NSD="+nsd;
     datos+="&#36;";
 	nsd=parseFloat(nsd);
@@ -241,20 +246,20 @@ function resolver12(){
 		datos+="NSS="+nss;
 	}else{
 		var datos=sb("NS","s")+"=("+sb("NP","I")+"*NCN)-((1/2)*"+sb("NP","I")+"(NCN-"+sb("NP","N")+"))<br>";
-		ss1=(npi*t.npi.qs).toFixed(4)	
-		ss2=(1/2*npi*(t.npi.qs-t.cero.qs)).toFixed(4)	
-		
+		ss1=(npi*t.npi.qs).toFixed(4)
+		ss2=(1/2*npi*(t.npi.qs-t.cero.qs)).toFixed(4)
+
 		datos+=sb("NS","s")+"="+ss1+"-"+ss2+"<br>";
 		nss=(parseFloat(ss1)-parseFloat(ss2)).toFixed(4);
-		
+
 		datos+=sb("NS","s")+"="+nss;
-		
+
 	}
-	
+
     datos+="&#36;";
-	
+
 	nss=parseFloat(nss);
-	
+
 	$("#r12").html(datos)
 }
 function resolver13(){
@@ -263,52 +268,52 @@ function resolver13(){
 	var datos=sb("NSG","o")+"="+nsd+"+"+nss+"<br>";
 	datos+=sb("NSG","o")+"="+nsgo;
     datos+="&#36;";
-	
+
 	nss=parseFloat(nss);
 
 	$("#r13").html(datos)
 }
 function resolver14(){
-	
+
 	pe=(sgo-nsgo).toFixed(4);
 	var datos="PE="+sgo+"-"+nsgo+"<br>";
 	datos+=sb("PE","")+"="+pe;
     datos+="&#36;";
-	
+
 	pe=parseFloat(pe);
 	$("#r14").html(datos);
 }
 function resolver15(){
-	
+
 	ig=(nqi*ts).toFixed(4);
 	var datos="IG="+nqi+"*"+ts+"<br>";
 	datos+=sb("IG","")+"="+ig;
     datos+="&#36;";
-	
+
 	ig=parseFloat(ig);
 	$("#r15").html(datos);
 }
 function resolver16(){
-	
+
 	ps=(pe-ig).toFixed(4);
 	var datos="PS="+pe+"-"+ig+"<br>";
 	datos+=sb("PS","")+"="+ps;
     datos+="&#36;";
-	
+
 	datos+='<br><small>La Introducción de un arancel del '+ar+'% genero una perdida social de '+ps+'$ sin embargo se logro crecer la producción nacional de ('+(pn)+') a ('+ npn+') </small>';
-	
+
 	ps=parseFloat(ps);
-	
-	
+
+
 	$("#r16").html(datos);
-	
+
 	//alert(ncn);
 }
 
 function mt(tn){
 	console.log("tabla:");
 	console.log(t.npi);
-	
+
 	var datos='<table class="table table-bordered table-striped table-hover">';
 	datos+='<thead><tr>';
 	datos+='<td></td>';
@@ -316,49 +321,49 @@ function mt(tn){
 	datos+='<td>'+sb("Q","D")+' x</td>';
 	datos+='<td>'+sb("Q","S")+' x</td>';
 	datos+='</tr></thead>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("P","max")+'</td>';
 	datos+='<td>'+tn.pmax.p+'</td>';
 	datos+='<td>'+tn.pmax.qd+' </td>';
 	datos+='<td>'+tn.pmax.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("P","e")+'</td>';
 	datos+='<td>'+tn.pe.p+'</td>';
 	datos+='<td>'+tn.pe.qd+' </td>';
 	datos+='<td>'+tn.pe.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("P","M")+'</td>';
 	datos+='<td>'+tn.pm.p+'</td>';
 	datos+='<td>'+tn.pm.qd+' </td>';
 	datos+='<td>'+tn.pm.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("P","min")+'</td>';
 	datos+='<td>'+tn.pmin.p+'</td>';
 	datos+='<td>'+tn.pmin.qd+' </td>';
 	datos+='<td>'+tn.pmin.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("","")+'</td>';
 	datos+='<td>'+tn.cero.p+'</td>';
 	datos+='<td>'+tn.cero.qd+' </td>';
 	datos+='<td>'+tn.cero.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='<tr>';
 	datos+='<td>'+sb("NPI","")+'</td>';
 	datos+='<td>'+tn.npi.p+'</td>';
 	datos+='<td>'+tn.npi.qd+' </td>';
 	datos+='<td>'+tn.npi.qs+' </td>';
 	datos+='</tr>';
-	
+
 	datos+='</table>';
 	return datos;
 }
@@ -384,7 +389,7 @@ function graficar5(){
 			graphType: 'polyline',
 			fnType: 'vector',
 			color:'red',
-			
+
 		  },{
 			vector: [parseFloat(t.pmax.qs)-parseFloat(t.cero.qs),parseFloat(t.pmax.p)-parseFloat(t.pmin.p)],
 			offset: [ parseFloat(t.pmin.qs),parseFloat(t.pmin.p)],
@@ -429,7 +434,7 @@ function graficar5(){
 			x: parseFloat(t.cero.qs),
 			text: 'Qmin:'+parseFloat(t.cero.qs)
 		  }],
-		  
+
   tip: {
     xLine: true,    // dashed line parallel to y = 0
     yLine: true,    // dashed line parallel to x = 0
@@ -463,7 +468,7 @@ function graficar10(){
 			graphType: 'polyline',
 			fnType: 'vector',
 			color:'red',
-			
+
 		  },{
 			vector: [parseFloat(t.pmax.qs)-parseFloat(t.cero.qs),parseFloat(t.pmax.p)-parseFloat(t.pmin.p)],
 			offset: [ parseFloat(t.pmin.qs),parseFloat(t.pmin.p)],
@@ -493,7 +498,7 @@ function graficar10(){
 		  }, {
 			x: t.pm.qs,
 			text: 'PN:'+parseFloat(t.pm.qs)
-		  }, 
+		  },
 		  	{x: t.pm.qd,
 			text: 'CN:'+parseFloat(t.pm.qd)
 		  },{x: t.cero.qd,
@@ -520,7 +525,7 @@ function graficar10(){
 			y: parseFloat(t.npi.p),
 			text: 'NPI:'+parseFloat(t.npi.p)
 		  }],
-		  
+
   tip: {
     xLine: true,    // dashed line parallel to y = 0
     yLine: true,    // dashed line parallel to x = 0
