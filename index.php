@@ -16,10 +16,10 @@ $folder="";
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 
 <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/g/d3.min.js"></script>
-    <script src="js/g/function-plot.js"></script>
-    <script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/g/d3.min.js"></script>
+<script src="js/g/function-plot.js"></script>
+<script src="js/script.js"></script>
 </head>
 
 <body>
@@ -35,29 +35,38 @@ $folder="";
                         <table>
                             <tr>
                                 <td><?php echo sb("Q","D")?>=</td>
-                                <td><input type="number" id="a" step="0.table1" class="form-control" value="85.8"></td>
+                                <td><input type="number" id="a" step="0.table1" class="form-control" value="140"></td>
 
-                                <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-8"><span class="input-group-addon">P</span></div></td>
+                                <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-20"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
                                 <td><?php echo sb("Q","S")?>=</td>
-                                <td><input type="number" id="c" step="0.table1" class="form-control" value="10.5"></td>
+                                <td><input type="number" id="c" step="0.table1" class="form-control" value="-20"></td>
 
-                                <td><div class="input-group"><input type="number" id="d" step="0.01" class="form-control" value="3"><span class="input-group-addon">P</span></div></td>
+                                <td><div class="input-group"><input type="number" id="d" step="0.01" class="form-control" value="20"><span class="input-group-addon">P</span></div></td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <div class="input-group input-group-sm">
                                       <span class="input-group-addon"><small>Precio Mundial</small></span>
-                                      <input type="number" class="form-control" placeholder="4" id="pm" value="4">
+                                      <input type="number" class="form-control" placeholder="4" id="pm" value="2">
                                         <span class="input-group-addon">&#36;</span>
                                     </div>
                                 </td>
                                 <td colspan="3">
                                     <div class="input-group input-group-sm">
                                       <span class="input-group-addon"><small>Arancel</small></span>
-                                      <input type="number" class="form-control col-lg-2" placeholder="4" id="ar" value="50">
+                                      <input type="number" class="form-control col-lg-2" placeholder="4" id="ar" value="0">
                                         <span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="input-group input-group-sm">
+                                      <span class="input-group-addon"><small>Cuota de Importación</small></span>
+                                      <input type="number" class="form-control" placeholder="4" id="ci" value="40">
+                                        <span class="input-group-addon">Unidades</span>
                                     </div>
                                 </td>
                             </tr>
