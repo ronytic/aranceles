@@ -186,6 +186,51 @@ $folder="";
         </div>
         <div class="row">
             <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">9.- Nuevo Precio Interno</div>
+                    <div class="panel-body text-center">
+						<?php echo sb("Q","D")?>=<?php echo sb("Q","S")?>+<?php echo sb("CI","")?>
+                        <div id="r9_1"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">10.- Arancel Específico</div>
+                    <div class="panel-body text-center">
+						<?php echo sb("t","($)")?>=NPI-<?php echo sb("P","M")?>
+                        <div id="r10_1"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">11.- Arancel Ad Valorem (sobre su precio)</div>
+                    <div class="panel-body text-center">
+						<?php echo sb("t","%")?>=<?php echo sb("t","($)")?>/<?php echo sb("P","M")?>
+                        <div id="r11_1"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Gráfico</div>
+                    <div class="panel-body text-center">
+						
+                        <div id="r11_2"></div>
+                        <div id="g11_2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">9. Arancel Especifico</div>
                     <div class="panel-body text-center">
