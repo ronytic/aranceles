@@ -31,6 +31,8 @@ var ig=0;
 var ps=0;
 
 var ci=0;
+
+var ar1=0;
 $(document).on("ready",function(){
     $("#resolver").click(function(){
         a=parseFloat($("#a").val());
@@ -52,6 +54,16 @@ $(document).on("ready",function(){
         resolver8();
         resolver81();
         resolver9();
+		
+		/******/
+		
+		resolver9_1();
+		resolver10_1();
+		resolver11_1();
+		resolver11_2()
+		/*****/
+		
+		
         resolver10();
 		resolver11();
 		resolver12();
@@ -138,7 +150,7 @@ function resolver5(){
 	$("#r5").html(datos);
     $("#g5").html('');
 
-	graficar5();
+	graficar5('#g5');
 
 	console.log(t);
 }
@@ -146,7 +158,7 @@ function resolver5(){
 function resolver6(){
     sd=((1/2)*(pmax-pm)*cn).toFixed(4);
     var datos=sb("S","D")+"=1/2*("+pmax+"-"+pm+")*"+cn+"<br>";
-    datos=sb("S","D")+"="+sd;
+    datos+=sb("S","D")+"="+sd;
     datos+="&#36;";
     $("#r6").html(datos)
     sd=parseFloat(sd);
@@ -191,6 +203,55 @@ function resolver81(){
     datos+="<br><small>De que la industria de los singanis es Bolivia alcanza los "+cn+" unidades de las cuales solamente el "+porpn+" es cubierto por la industria nacional, los restantes "+qi+"unidades("+porqi+") son importadas.</small>";
     $("#r81").html(datos)
 }
+
+function resolver9_1(){
+    npi=((a-c-ci)/(d-b)).toFixed(4);
+    var datos=a+"+("+b+"p)="+c+"+("+d+"p)+"+ci+"<br>";
+	datos+=sb("NPI","")+"=(("+a+")-("+c+")-("+ci+"))/("+d+"-("+b+"))"+"<br>";
+    datos+=sb("NPI","")+"="+npi;
+    datos+="&#36;";
+
+    $("#r9_1").html(datos)
+}
+function resolver10_1(){
+    ts=((npi)-(pm)).toFixed(4);
+    var datos=sb("t","($)")+"="+npi+"-"+pm+"<br>";
+    datos+=sb("t","($)")+"="+ts;
+    datos+="&#36;";
+
+    $("#r10_1").html(datos)
+}
+
+function resolver11_1(){
+    npi
+    var datos=sb("t","%")+"="+ts+"/"+pm+"*100"+"<br>";
+    datos+=sb("t","(%)")+"="+ar1;
+    datos+="%"+"<br>";
+	
+	datos+="<small>Por lo tanto la Tasa Arancelaría Equivalente <strong>TAE</strong> es de <strong>("+ar1+"%)</strong></small>"
+
+    $("#r11_1").html(datos)
+}
+
+
+function resolver11_2(){
+	var datos="";
+	npi=parseFloat(npi);
+    t.npi.p=npi;
+    t.npi.qd=(a+b*npi).toFixed(4)
+    t.npi.qs=(c+d*npi).toFixed(4)
+	
+	ncn=parseFloat(t.npi.qd);
+	npn=parseFloat(t.npi.qs);
+
+	nqi=parseFloat((ncn-npn).toFixed(4));
+	
+	datos+=mt(t);
+	
+	$("#r11_2").html(datos);
+	graficar10("#g11_2")
+}
+
 function resolver9(){
     ts=(pm*ar/100).toFixed(4);
     var datos=sb("t","($)")+"="+pm+"*"+(ar/100)+"<br>";
@@ -221,7 +282,9 @@ function resolver10(){
 
     $("#r10").html(datos);
 	$("#g10").html('');
-	graficar10();
+	
+	
+	graficar10("#g10");
 
     console.log(t);
 
@@ -367,9 +430,9 @@ function mt(tn){
 	datos+='</table>';
 	return datos;
 }
-function graficar5(){
+function graficar5(destino){
 	functionPlot({
-		  target: '#g5',
+		  target: destino,
 		  width: 400,
 		  height: 400,
 		  grid: 0,
@@ -446,9 +509,9 @@ function graficar5(){
 }
 
 
-function graficar10(){
+function graficar10(destino){
 	functionPlot({
-		  target: '#g10',
+		  target: destino,
 		  width: 400,
 		  height: 400,
 		  grid: 0,
