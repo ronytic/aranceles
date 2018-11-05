@@ -25,7 +25,7 @@ $folder="";
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-sm-12">
                 <h3 class="text-center">Efecto de los Aranceles</h3>
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -35,7 +35,7 @@ $folder="";
                         <table>
                             <tr>
                                 <td><?php echo sb("Q","D")?>=</td>
-                                <td><input type="number" id="a" step="0.table1" class="form-control" value="140"></td>
+                                <td><input type="number" id="a" step="0.1" class="form-control" value="140"></td>
 
                                 <td><div class="input-group"><input type="number" id="b" step="0.01" class="form-control" value="-20"><span class="input-group-addon">P</span></div></td>
                             </tr>
@@ -84,7 +84,7 @@ $folder="";
 
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">1.-Precio de Equilibrio</div>
                     <div class="panel-body text-center">
@@ -95,7 +95,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">2.-Cantidad de Equilibrio</div>
                     <div class="panel-body text-center">
@@ -107,7 +107,7 @@ $folder="";
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">3.-Precio Max</div>
                     <div class="panel-body text-center">
@@ -117,7 +117,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">4.- Precio Min</div>
                     <div class="panel-body text-center">
@@ -129,7 +129,7 @@ $folder="";
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">5.-Gráfico</div>
                     <div class="panel-body text-center">
@@ -139,7 +139,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">6.- Excedente de la Demanda</div>
                     <div class="panel-body text-center">
@@ -151,7 +151,7 @@ $folder="";
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">7.- Excedente de la Oferta</div>
                     <div class="panel-body text-center">
@@ -161,7 +161,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">8.- Excedente Global Inicial - Beneficio Social</div>
                     <div class="panel-body text-center">
@@ -173,7 +173,7 @@ $folder="";
             </div>
         </div>
         <div class="row primero">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Cantidad Necesaria de las Importaciones</div>
                     <div class="panel-body text-center">
@@ -185,7 +185,7 @@ $folder="";
             </div>
         </div>
         <div class="row segundo">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">9.- Nuevo Precio Interno</div>
                     <div class="panel-body text-center">
@@ -195,7 +195,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">10.- Arancel Específico</div>
                     <div class="panel-body text-center">
@@ -207,7 +207,7 @@ $folder="";
             </div>
         </div>
         <div class="row segundo">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">11.- Arancel Ad Valorem (sobre su precio)</div>
                     <div class="panel-body text-center">
@@ -217,7 +217,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Gráfico</div>
                     <div class="panel-body text-center">
@@ -230,7 +230,7 @@ $folder="";
             </div>
         </div>
         <div class="row primero">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">9. Arancel Especifico</div>
                     <div class="panel-body text-center">
@@ -240,7 +240,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">10. Nuevo Precio Interno</div>
                     <div class="panel-body text-center">
@@ -253,7 +253,7 @@ $folder="";
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n11"></span>. Nuevo Excedente de la Demanda</div>
                     <div class="panel-body text-center">
@@ -263,7 +263,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n12"></span>. Nuevo Excedente de la Oferta</div>
                     <div class="panel-body text-center">
@@ -275,7 +275,7 @@ $folder="";
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n13"></span>. Nuevo Excedente Global</div>
                     <div class="panel-body text-center">
@@ -285,7 +285,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n14"></span>. Pérdida del Excedente</div>
                     <div class="panel-body text-center">
@@ -297,7 +297,7 @@ $folder="";
             </div>
         </div>
         <div class="row primero">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n15"></span>15. Ingresos Gubernamentales</div>
                     <div class="panel-body text-center">
@@ -307,7 +307,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading"><span class="n16"></span>16. Pérdida Social</div>
                     <div class="panel-body text-center">
@@ -319,7 +319,7 @@ $folder="";
             </div>
         </div>
         <div class="row segundo">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading"><span class="n16"></span>16. Pérdida Social</div>
                     <div class="panel-body text-center">
@@ -329,7 +329,7 @@ $folder="";
                 </div>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading"><span class="n16"></span>17. Subvención Externa</div>
                     <div class="panel-body text-center">
@@ -340,6 +340,17 @@ $folder="";
 
             </div>
         </div>
+        <div class="row">
+          <div class="col-lg-12">
+          <div class="panel panel-info">
+            <div class="panel-heading text-center">
+              Desarrollado y Diseñado por Ronald Nina Layme
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    <div class="">
     </div>
 </body>
 </html>
