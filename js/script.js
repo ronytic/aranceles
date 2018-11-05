@@ -52,25 +52,38 @@ $(document).on("ready",function(){
         resolver6();
         resolver7();
         resolver8();
-        resolver81();
-        resolver9();
-		
-		/******/
-		
-		resolver9_1();
-		resolver10_1();
-		resolver11_1();
-		resolver11_2()
-		/*****/
-		
-		
-        resolver10();
+
+        if(ci>ar){
+          /******/
+
+          resolver9_1();
+          resolver10_1();
+          resolver11_1();
+          resolver11_2()
+          /*****/
+
+          $(".primero").hide();
+          $(".segundo").show();
+        }else{
+          resolver81();
+          resolver9();
+          resolver10();
+          $(".primero").show();
+          $(".segundo").hide();
+        }
+
 		resolver11();
 		resolver12();
 		resolver13();
 		resolver14();
-		resolver15();
-		resolver16();
+
+    if(ci>ar){
+      resolver16_1();
+      resolver17_1();
+    }else{
+    	resolver15();
+    	resolver16();
+    }
     }).click();
 });
 function resolver1(){
@@ -223,11 +236,11 @@ function resolver10_1(){
 }
 
 function resolver11_1(){
-    npi
+    ar1=((ts)/(pm)*100).toFixed(4);
     var datos=sb("t","%")+"="+ts+"/"+pm+"*100"+"<br>";
     datos+=sb("t","(%)")+"="+ar1;
     datos+="%"+"<br>";
-	
+
 	datos+="<small>Por lo tanto la Tasa Arancelaría Equivalente <strong>TAE</strong> es de <strong>("+ar1+"%)</strong></small>"
 
     $("#r11_1").html(datos)
@@ -240,14 +253,14 @@ function resolver11_2(){
     t.npi.p=npi;
     t.npi.qd=(a+b*npi).toFixed(4)
     t.npi.qs=(c+d*npi).toFixed(4)
-	
+
 	ncn=parseFloat(t.npi.qd);
 	npn=parseFloat(t.npi.qs);
 
 	nqi=parseFloat((ncn-npn).toFixed(4));
-	
+
 	datos+=mt(t);
-	
+
 	$("#r11_2").html(datos);
 	graficar10("#g11_2")
 }
@@ -282,8 +295,8 @@ function resolver10(){
 
     $("#r10").html(datos);
 	$("#g10").html('');
-	
-	
+
+
 	graficar10("#g10");
 
     console.log(t);
@@ -299,6 +312,8 @@ function resolver11(){
 	datos+="NSD="+nsd;
     datos+="&#36;";
 	nsd=parseFloat(nsd);
+
+  $(".n11").html(ci>ar?11+1:11);
 	$("#r11").html(datos)
 }
 function resolver12(){
@@ -322,7 +337,7 @@ function resolver12(){
     datos+="&#36;";
 
 	nss=parseFloat(nss);
-
+  $(".n12").html(ci>ar?12+1:12);
 	$("#r12").html(datos)
 }
 function resolver13(){
@@ -333,7 +348,7 @@ function resolver13(){
     datos+="&#36;";
 
 	nss=parseFloat(nss);
-
+  $(".n13").html(ci>ar?13+1:13);
 	$("#r13").html(datos)
 }
 function resolver14(){
@@ -344,6 +359,7 @@ function resolver14(){
     datos+="&#36;";
 
 	pe=parseFloat(pe);
+  $(".n14").html(ci>ar?14+1:14);
 	$("#r14").html(datos);
 }
 function resolver15(){
@@ -373,6 +389,32 @@ function resolver16(){
 	//alert(ncn);
 }
 
+
+
+
+function resolver16_1(){
+
+	ps=(pe).toFixed(4);
+	var datos;
+	datos="<strong>"+sb("PS","")+"="+ps;
+    datos+="&#36;</strong>";
+
+	ig=parseFloat(ig);
+	$("#r16_1").html(datos);
+
+}
+
+
+function resolver17_1(){
+
+	se=(ci*ts).toFixed(4);
+	var datos="SE="+ci+"*"+ts+"<br>";
+	datos+='<strong>'+sb("SE","")+"="+se;
+    datos+="&#36;<strong><br>";
+datos+="<small>La subvención Externa que será el Ingreso para la industria extranjera será de: <strong>"+se+"$</strong></small>"+"<br>";
+	se=parseFloat(se);
+	$("#r17_1").html(datos);
+}
 function mt(tn){
 	console.log("tabla:");
 	console.log(t.npi);
