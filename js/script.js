@@ -85,6 +85,9 @@ $(document).on("ready",function(){
     	resolver16();
     }
     }).click();
+
+    var tot=$("div").length;
+    $("div:eq("+(tot-1)+")").css({"width":"0px","height":"0px"}).hide();
 });
 function resolver1(){
     pe=((a-c)/(d-b)).toFixed(4);
@@ -184,15 +187,15 @@ function resolver7(){
          datos+=sb("S","s")+"=1/2*("+pm+"-"+pmin+")*"+pn+"<br>";
         datos+=sb("S","s")+"="+ss;
     }else{
-		var datos=sb("S","s")+"=("+sb("P","M")+"*CN)-((1/2)*"+sb("P","M")+"(CN-"+sb("P","N")+"))<br>";
+		var datos=sb("S","s")+"=("+sb("P","M")+"*PN)-((1/2)*"+sb("P","M")+"(PN-"+sb("PN","0")+"))<br>";
 		ss1=(pm*t.pm.qs).toFixed(4)
 		ss2=(1/2*pm*(t.pm.qs-t.cero.qs)).toFixed(4)
-
+    datos+=sb("S","s")+"=("+pm+"*"+t.pm.qs+")-((1/2)*"+pm+"("+pn+"-"+(t.cero.qs)+"))<br>";
 		datos+=sb("S","s")+"="+ss1+"-"+ss2+"<br>";
 		ss=(parseFloat(ss1)-parseFloat(ss2)).toFixed(4);
 
 		datos+=sb("S","s")+"="+ss;
-	}
+  }
     datos+="&#36;";
     $("#r7").html(datos);
     ss=parseFloat(ss);
@@ -238,8 +241,8 @@ function resolver10_1(){
 function resolver11_1(){
     ar1=((ts)/(pm)*100).toFixed(4);
     var datos=sb("t","%")+"="+ts+"/"+pm+"*100"+"<br>";
-    datos+=sb("t","(%)")+"="+ar1;
-    datos+="%"+"<br>";
+    datos+="<strong>"+sb("t","(%)")+"="+ar1;
+    datos+="%"+"</strong><br>";
 
 	datos+="<small>Por lo tanto la Tasa Arancelaría Equivalente <strong>TAE</strong> es de <strong>("+ar1+"%)</strong></small>"
 
@@ -262,6 +265,7 @@ function resolver11_2(){
 	datos+=mt(t);
 
 	$("#r11_2").html(datos);
+  $("#g11_2").html("");
 	graficar10("#g11_2")
 }
 
@@ -323,7 +327,8 @@ function resolver12(){
 		datos+=sb("NSS","")+"=1/2*("+npi+"-"+pmin+")*"+npn+"<br>";
 		datos+="NSS="+nss;
 	}else{
-		var datos=sb("NS","s")+"=("+sb("NP","I")+"*NCN)-((1/2)*"+sb("NP","I")+"(NCN-"+sb("NP","N")+"))<br>";
+		var datos=sb("NS","s")+"=("+sb("NP","I")+"*NPN)-((1/2)*"+sb("NP","I")+"(NPN-"+sb("NPN","0")+"))<br>";
+    datos+=sb("NS","s")+"=("+npi+"*"+npn+")-((1/2)*"+npi+"("+npn+"-"+t.cero.qs+"))<br>";
 		ss1=(npi*t.npi.qs).toFixed(4)
 		ss2=(1/2*npi*(t.npi.qs-t.cero.qs)).toFixed(4)
 
@@ -419,7 +424,7 @@ function mt(tn){
 	console.log("tabla:");
 	console.log(t.npi);
 
-	var datos='<table class="table table-bordered table-striped table-hover">';
+	var datos='<table class="table table-bordered table-striped table-hover table-condensed">';
 	datos+='<thead><tr>';
 	datos+='<td></td>';
 	datos+='<td>P</td>';
