@@ -172,7 +172,7 @@ $folder="";
 
             </div>
         </div>
-        <div class="row">
+        <div class="row primero">
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Cantidad Necesaria de las Importaciones</div>
@@ -184,7 +184,7 @@ $folder="";
 
             </div>
         </div>
-        <div class="row">
+        <div class="row segundo">
             <div class="col-lg-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">9.- Nuevo Precio Interno</div>
@@ -206,7 +206,7 @@ $folder="";
 
             </div>
         </div>
-        <div class="row">
+        <div class="row segundo">
             <div class="col-lg-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">11.- Arancel Ad Valorem (sobre su precio)</div>
@@ -221,7 +221,7 @@ $folder="";
                 <div class="panel panel-primary">
                     <div class="panel-heading">Gráfico</div>
                     <div class="panel-body text-center">
-						
+
                         <div id="r11_2"></div>
                         <div id="g11_2"></div>
                     </div>
@@ -229,7 +229,7 @@ $folder="";
 
             </div>
         </div>
-        <div class="row">
+        <div class="row primero">
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">9. Arancel Especifico</div>
@@ -255,7 +255,7 @@ $folder="";
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">11. Nuevo Excedente de la Demanda</div>
+                    <div class="panel-heading"><span class="n11"></span>. Nuevo Excedente de la Demanda</div>
                     <div class="panel-body text-center">
                         <?php echo sb("NS","D")?>=1/2*(<?php echo sb("P","max")?>-NPI)*NCN
                         <div id="r11"></div>
@@ -265,7 +265,7 @@ $folder="";
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">12. Nuevo Excedente de la Oferta</div>
+                    <div class="panel-heading"><span class="n12"></span>. Nuevo Excedente de la Oferta</div>
                     <div class="panel-body text-center">
 
                         <div id="r12"></div>
@@ -277,7 +277,7 @@ $folder="";
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">13. Nuevo Excedente Global</div>
+                    <div class="panel-heading"><span class="n13"></span>. Nuevo Excedente Global</div>
                     <div class="panel-body text-center">
                         <?php echo sb("NSG","")?>=NSD+NSS
                         <div id="r13"></div>
@@ -287,7 +287,7 @@ $folder="";
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">14. Pérdida del Excedente</div>
+                    <div class="panel-heading"><span class="n14"></span>. Pérdida del Excedente</div>
                     <div class="panel-body text-center">
                         PE=<?php echo sb("SG","o")?>-NSG
                         <div id="r14"></div>
@@ -296,10 +296,10 @@ $folder="";
 
             </div>
         </div>
-        <div class="row">
+        <div class="row primero">
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">15. Ingresos Gubernamentales</div>
+                    <div class="panel-heading"><span class="n15"></span>15. Ingresos Gubernamentales</div>
                     <div class="panel-body text-center">
                         <?php echo sb("IG","")?>=NQI+<?php echo sb("t","($)")?>
                         <div id="r15"></div>
@@ -309,10 +309,32 @@ $folder="";
             </div>
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">16. Pérdida Social</div>
+                    <div class="panel-heading"><span class="n16"></span>16. Pérdida Social</div>
                     <div class="panel-body text-center">
                         PS=PE-IG
                         <div id="r16"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row segundo">
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="n16"></span>16. Pérdida Social</div>
+                    <div class="panel-body text-center">
+                        <?php echo sb("PS","")?>=PE
+                        <div id="r16_1"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="n16"></span>17. Subvención Externa</div>
+                    <div class="panel-body text-center">
+                        SE=CI*<?php echo sb("t","($)")?>
+                        <div id="r17_1"></div>
                     </div>
                 </div>
 
